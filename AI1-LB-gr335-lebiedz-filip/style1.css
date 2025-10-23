@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.todo {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+#szukaj {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background: white;
+}
+
+#szukaj:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.zadania {
+    margin-bottom: 25px;
+}
+
+.zadanie {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 6px;
+    border: 2px solid #ecf0f1;
+}
+
+.zadanie.done {
+    background: #e8f6f3;
+    border-color: #27ae60;
+}
+
+.zadanie.done .zawartosc {
+    text-decoration: line-through;
+    color: #7f8c8d;
+}
+
+.zadanie.edytuje {
+    background: #fff9e6;
+    border-color: #f39c12;
+}
+
+.checkbox {
+    margin-right: 15px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.zawartosc {
+    flex-grow: 1;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 0;
+    color: #2c3e50;
+}
+
+.data-zadania {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin: 0 15px;
+    background: #ecf0f1;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+mark {
+    background-color: #f1c40f;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.usun, .zapisz {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.usun {
+    background: #e74c3c;
+    color: white;
+}
+
+.usun:hover {
+    background: #c0392b;
+}
+
+.zapisz {
+    background: #27ae60;
+    color: white;
+    margin-left: 10px;
+}
+
+.zapisz:hover {
+    background: #219a52;
+}
+
+.dodaj {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    border: 2px solid #ecf0f1;
+}
+
+#odczyt {
+    flex-grow: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#odczyt:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+#datazad {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#datazad:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+#dodaj {
+    padding: 12px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#dodaj:hover {
+    background: #2980b9;
+}
+
+.edytujtekst {
+    flex-grow: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 12px;
+}
+
+.edytujtekst:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.edytujdate {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.edytujdate:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+    
+    .todo {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .dodaj {
+        flex-direction: column;
+    }
+    
+    .zadanie {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .zawartosc {
+        margin: 0;
+    }
+    
+    .data-zadania {
+        margin: 0;
+    }
+    
+    .usun, .zapisz {
+        align-self: stretch;
+        text-align: center;
+    }
+}
